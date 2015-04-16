@@ -17,19 +17,19 @@ if (BABYLON.Engine.isSupported()) {
     var light = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene);
 
     //Creation of 3 boxes and 2 spheres
-    var box1 = BABYLON.Mesh.CreateBox("Box1", 12.0, scene);
-    /*var box2 = BABYLON.Mesh.CreateBox("Box2", 6.0, scene);
-    var box3 = BABYLON.Mesh.CreateBox("Box3", 6.0, scene);
-    var box4 = BABYLON.Mesh.CreateBox("Box4", 6.0, scene);
+    var box1 = BABYLON.Mesh.CreateBox("Box1", 10.0, scene);
+    var box2 = BABYLON.Mesh.CreateBox("Box2", 10.0, scene);
+    var box3 = BABYLON.Mesh.CreateBox("Box3", 10.0, scene);
+    /*var box4 = BABYLON.Mesh.CreateBox("Box4", 6.0, scene);
     var box5 = BABYLON.Mesh.CreateBox("Box5", 6.0, scene);
     var box6 = BABYLON.Mesh.CreateBox("Box6", 6.0, scene);
     var box7 = BABYLON.Mesh.CreateBox("Box7", 6.0, scene);*/
 
     //Moving boxes on the x axis
     box1.position.x = 0;
-    /*box2.position.x = -10;
+    box2.position.x = 0;
     box3.position.x = 0;
-    box4.position.x = 15;
+    /*box4.position.x = 15;
     box5.position.x = 30;
     box6.position.x = 45;*/
 
@@ -37,11 +37,12 @@ if (BABYLON.Engine.isSupported()) {
     box1.scaling.x=10;
     box1.scaling.z=3;
     box1.scaling.y=0.1;
-    box1.rotation.x = Math.PI / 6;
+    box1.rotation.x = Math.PI / 1;
 
-    var box2 = box1;
+
+    /*var box2 = box1;
     box2.position.y=1;
-
+    */
 
     //Rotate box around the y axis
     /*box2.rotation.y = Math.PI / 3;
@@ -58,6 +59,16 @@ if (BABYLON.Engine.isSupported()) {
     //Moving box7 relatively to box1
     box7.parent = box1;
     box7.position.z = -10;*/
+
+    box2.parent = box1;
+    box2.position.z = -3;
+    box2.position.x = 0;
+    box2.position.y = 200; 
+
+    box3.parent = box1;
+    box3.position.z = 3;
+    box3.position.x = 0;
+    box3.position.y = -200; 
 
     return scene;
 }
