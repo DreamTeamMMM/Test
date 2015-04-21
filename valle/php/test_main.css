@@ -1,0 +1,66 @@
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+.nav li {display: inline;}
+
+.button_box {
+  margin-right: auto;
+  margin-left: auto;
+}
+.jumbotron {
+  background-color: black;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron p {
+  font-size: 20px;
+  color: green;
+}
+.jumbotron .container {
+  position: relative;
+  top:20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#remember_me {
+  color: white;
+}
+.jumbotron .container .box .login_box, .signup_box{
+  margin: 20px;
+  height: auto;
+  width: auto;
+  border-radius: 20px;
+  display: inline-block;
+}
+.login_form{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+.signup_form{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+.skapa_login_box{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: blue;
+}
+.submit {float: right;}
+/* ************** Få box i jumbotron i mitten **************** */
+.vertical-center {
+  display: relative;
+  align-items: center;
+  text-align: center;  /* align the inline(-block) elements horizontally */
+}
+.vertical-center > .container {
+                           /* reset the font property */
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
