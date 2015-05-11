@@ -38,6 +38,16 @@ var main = function() {
 		}
 	})
 
+//------------------------------------------//
+// Stop dropdown closing
+//Taken from: http://stackoverflow.com/questions/10863821/bootstrap-dropdown-closing-when-clicked
+//------------------------------------------//
+
+	$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
+//------------------------------------------//
+
 	navbarSize(windowWidth);
 	//canvasToFullDisplay(windowWidth,windowHeight)
 	$(window).resize(function (){

@@ -2,17 +2,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- För hemsidan-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="main.css">
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>	
 	<script src="bootstrap/js/bootstrap.js"></script>
+	<!--script src="freeRoomBroom.js"></script-->
+	<!--script src="fopen.js"></script-->
 
-
-	<!-- Från frans orgonal fil-->
+	<!-- För rendering-->
 	<script src="sources/babylon.js"></script>
 	<script src="sources/hand.js"></script>
+    <script src="script/geoLoc.js"></script>
+    <script src="script/pathFinder.js"></script>
 	<!-- <link   href='style.css' rel='stylesheet'/-->
 
 	<script src="script.js"></script>
@@ -31,7 +35,7 @@
 				<div class="right-menu-container">
 					<ul id="right-menu" class="">
 						<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default signup" href="test_view.php">Sign Up</button>
+							<button type="button" class="btn btn-default signup" href="test_view.php">Sign Up</button>
 						</div>
 						<div class="btn-group" role="group">
 							<button type="button" class="btn btn-default login">Log In</button>
@@ -52,10 +56,10 @@
 					</ul>
 				</div>
 				<div class="formular">
-					<div id= "signup_box" class="hidden">
+					<div id="signup_box" class="hidden">
 						<?php include "test_register.php"; ?>
 						<div class="signup_form">
-							<form method="post" action="test_view.php" name="registerform" id="registerform">
+							<form method="post" action="index.php" name="registerform" id="registerform">
 								<p>
 									<input type="text" name="username" id="username" value="" placeholder="Username">
 								</p>
@@ -72,6 +76,25 @@
 							</form>
 						</div>
 					</div>
+					<div id="login_box" class="hidden">
+						<?php include "test_login.php"; ?>
+						<div class="login_form">
+							<form method="post" action="index.php" name="loginform" id="loginform">
+								<p>
+									<input type="text" name="username" id="username" value="" placeholder="Username or Email">
+								</p>
+								<p>
+									<input type="password" name="password" id="password" value="" placeholder="Password">
+								</p>
+								<p id="remember_me" class="remember_me">
+									<label>
+										<input type="checkbox" name="remember_me" id="remember_me">Kom ihåg mig
+									</label>
+								</p>
+								<p class="submit"><input type="submit" name="login" id="login" value="Login"></p>
+							</form>
+						</div> 
+					</div>
 				</div>
 			</div>
 		</div>
@@ -80,7 +103,7 @@
 
 	<div id="scene">
 		<div class="canvas-container">
-			<!--canvas id="canvas"></canvas-->
+			<canvas id="canvas"></canvas>
 			<!--</div>-->
 			<div id="search" class="search-box pull-left">
 				<ul class="btn-group">
@@ -120,8 +143,13 @@
 								<button type="button" class="btn btn-default">
 									Search Empty Room 
 								</button>
-								<input type="text" name="room" id="txt-room">
-								<input type="button" id="findButton" value="Submit">
+<input type="button" onclick="getLocation()" id="findMe" value="Find Me">
+
+<input type="text" name="start" id="txt-start">
+
+<input type="text" name="end" id="txt-end" onkeydown="if (event.keyCode == 13) document.getElementById('startNav').click()">
+
+<input type="button" id="startNav" value="Submit">
 							</div>
 						</li>
 					</ul>
@@ -134,6 +162,6 @@
 	<div class="result-Display">
 		hej
 	</div>
-	<script src="script/bab.js"></script>
+	<script src="script/bab1.js"></script>
 </body>
 </html>
