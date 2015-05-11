@@ -5,10 +5,36 @@ var main = function() {
 	
 	$('.signup').click( function() {
 		if ($('#signup_box').hasClass('hidden')){
+			//remove active box from other boxes
+			$('#login_box').removeClass('active_box')
+			$('#login_box').addClass('hidden')
+			//for this box
 			$('#signup_box').removeClass('hidden')
-			$('#signup_box').addClass('active')
+			$('#signup_box').addClass('active_box')
 		}else{
+			//remove active box from other boxes
+			$('#login_box').removeClass('active_box')
+			$('#login_box').addClass('hidden')
+			//for this box
 			$('#signup_box').addClass('hidden')
+			$('#signup_box').removeClass('active_box')
+		}
+	})
+	$('.login').click( function() {
+		if ($('#login_box').hasClass('hidden')){
+			//remove active box from other boxes
+			$('#signup_box').removeClass('active_box')
+			$('#signup_box').addClass('hidden')
+			//for this box
+			$('#login_box').removeClass('hidden')
+			$('#login_box').addClass('active_box')
+		}else{
+			//remove active box from other boxes
+			$('#signup_box').removeClass('active_box')
+			$('#signup_box').addClass('hidden')
+			//for this box
+			$('#login_box').addClass('hidden')
+			$('#login_box').removeClass('active_box')
 		}
 	})
 

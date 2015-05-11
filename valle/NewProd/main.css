@@ -12,7 +12,7 @@
 	padding: 15px;
 }
 
-#signup_box {
+#signup_box, #login_box {
 	border: 2px solid darkred;
 	border-radius: 10px;
 	margin: 5px;
@@ -20,6 +20,7 @@
 	position: absolute;
 	z-index: 100;
 }
+
 
 .search-box ul div{
 	border: 2px solid black;
