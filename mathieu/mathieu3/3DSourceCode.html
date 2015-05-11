@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>My first Babylon.js app</title>
+    <script src="sources/hand.js"></script>
+    <script src="sources/babylon.js"></script>
+    <link   href='style.css' rel='stylesheet'/>
+    <script src="script.js"></script>
+    <script src="script/geoLoc.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="script/pathFinder.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+  
+  <!--<div id="Floor">
+  </div>-->
+
+
+  <div id="input">
+  <!--<form id="selection">
+Floor:<br>
+<input type="text" name="floor" id="txt-floor">
+<br>
+Room:<br>
+<input type="text" name="room" id="txt-room">
+<input type="button" id="findButton" value="Submit">
+</form>  
+Select floor:<br>>
+<input type="text" name="floor" id="txt-floor">
+<select id = "txt-floor">
+  <option value="">select...</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+<br>
+Select room:<br>
+<input type="text" name="room" id="txt-room"> 
+<input type="button" id="findButton" value="Submit">-->
+<input type="button" onclick="getLocation()" id="findMe" value="Find Me">
+<p id="geoLoc">
+</p>
+<br>
+From:<br>
+<input type="text" name="start" id="txt-start">
+<br>
+To:<br>
+<input type="text" name="end" id="txt-end" onkeydown="if (event.keyCode == 13) document.getElementById('startNav').click()">
+<br>
+<input type="button" id="startNav" value="Submit">
+    </div>
+
+    <script src="script/bab1.js"></script>
+
+</body>
+</html>
